@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML CSS Review</title>
     <style>
+        /* css comment */
         .red-button {
             background-color: red;
             color: white;
@@ -20,12 +21,16 @@
 </head>
 
 <body>
-    <button class="red-button"
-    onclick="alert('hello')"
-    >Hello</button>
+    <button class="red-button" onclick="alert('hello')">Hello</button>
+    <!-- onclick-> runs after (when click the button) -->
     <p>paragraph of <button class="yellow-button">Hello</button> text</p>
     <script>
-        // alert('Hello')
+        // alert('Hello') // runs first (when the page is loaded)
+        /* multiline
+            comment
+          */
+         console.log(2 + 2)
+         console.log("text" + "Something")
     </script>
 </body>
 
