@@ -49,31 +49,63 @@
 
         // falsy value 
         /* false, 0, '', Nan, undefine, null */
-        if (0) {
-            console.log('truthy');
-        }
+        /* 
+       if (0) {
+           console.log('truthy');
+       }
 
-        //(truthy and falsy value): one way we use then is ike a shortcut in our code
-        const cartQuantity = 5;
-        if (cartQuantity > 0) {
-            console.log('Cart has products');
-        }
-        //shortcut
-        if (cartQuantity) {
-            console.log("Cart has products");
-        }
+       //(truthy and falsy value): one way we use then is ike a shortcut in our code
+       const cartQuantity = 5;
+       if (cartQuantity > 0) {
+           console.log('Cart has products');
+       }
+       //shortcut
+       if (cartQuantity) {
+           console.log("Cart has products");
+       }
+      
+               // truth and falsy value also work with logical operators
+               console.log(!0);
+       
+               // NaN 
+               console.log('test' / 5);
+               // undefined 
+               let variable;
+               console.log(variable);
+               // const variable1  incorrect
+               const variable1 = undefined;
+               console.log(variable1) */
 
-        // truth and falsy value also work with logical operators
-        console.log(!0);
+        //ternary operator
+        const result = true ? 'truthy' : 'falsy';
+        console.log(result);
+        const result1 = 0 ? 'truthy' : 'falsy';
+        console.log(result1);
 
-        // NaN 
-        console.log('test' / 5);
-        // undefined 
-        let variable;
-        console.log(variable);
-        // const variable1  incorrect
-        const variable1 = undefined;
-        console.log(variable1)
+        /* 
+        // and operator &&
+            value1 && value2
+            false && value2 => if first value is false don`t need to check second value to gard operator stop early is called short-circuit evaluation
+            In and operator check two is true side but in Guard Operator check first side is true
+        */
+        const condition = true;
+        if (condition) {
+            console.log('hello');
+        }
+        //Guard Operator
+        const message = false && console.log('hello');
+        console.log(message);
+        const message2 = 5 && 'hello';
+        console.log(message2);
+
+        /* 
+        true || value2 => if frit value is true don`t need to check second value
+        */
+        //Default Operator
+        const currency = 'EUR' || "USD";
+        console.log(currency);
+        const currency1 = undefined || "USD";
+        console.log(currency1) 
     </script>
 </body>
 
