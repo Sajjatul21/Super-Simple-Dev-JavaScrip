@@ -23,7 +23,18 @@
         else if(randomNumber >=2/3 && randomNumber <1){
            computerMove = 'scissors'
         }
-        console.log(computerMove)
+
+        let result= ''
+        if(computerMove === 'rock'){
+            result ='Tie'
+        }
+        else if(computerMove === 'paper'){
+            result = 'You Lose'
+        }
+        else if(computerMove === 'scissors'){
+            result = 'You Win'
+        }
+        alert(`You picked rock. Computer picked ${computerMove}. ${result}`)
     ">Rock</button>
 
     <button>Paper</button>
