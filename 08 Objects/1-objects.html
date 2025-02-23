@@ -38,22 +38,27 @@
                 starts: 4.5,
                 count: 87
             },
-            fun: function function1(){ // method
-                console.log('function inside object')
+            fun: function function1() { // method
+                console.log('function inside object');
             }
         };
         console.log(product2.name);
         console.log(product2['name']);
-        console.log(product2['delivery-time'])
-        console.log(product2['delivery-time'])
+        console.log(product2['delivery-time']);
+        console.log(product2['delivery-time']);
 
-        console.log(product2.rating.starts)
-        console.log(product2.fun())
+        console.log(product2.rating.starts);
+        console.log(product2.fun());
 
-        console.log(typeof console)
-        console.log(typeof console.log)  // object + function= method
+        console.log(typeof console);
+        console.log(typeof console.log);  // object + function= method
         // build-in object
-        Math.random()
+        Math.random();
+        console.log(JSON.stringify(product2));
+        console.log(typeof JSON.stringify(product2));
+
+        const jsonString = JSON.stringify(product2);
+        console.log(JSON.parse(jsonString))
     </script>
 </body>
 
