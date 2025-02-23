@@ -33,6 +33,8 @@
             looses: 0,
             ties: 0
         };
+        // localStorage.getItem('message')
+        console.log(localStorage.getItem('message'));
         function playGame(playerMove) {
             const computerMove = pickComputerMove();
             let result = '';
@@ -78,6 +80,8 @@
             else if (result === 'Tie') {
                 score.ties += 1;
             }
+            localStorage.setItem('message', 'hello');
+            
             alert(`You picked ${playerMove}. Computer picked ${computerMove}. ${result}
 Wins: ${score.wins}, Losses: ${score.looses}, Ties: ${score.ties}`);
         }
