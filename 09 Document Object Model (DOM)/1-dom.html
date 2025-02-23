@@ -10,17 +10,27 @@
 <body>
     <h1>Document Object Model</h1>
     <button>Hello</button>
+    <button class="js-button">Second button</button>
     <script>
-        // document is an object . document objects property is title
-        console.log(document.title)
-        document.title = 'Changed'
+        /*   // document is an object . document objects property is title
+          console.log(document.title)
+          document.title = 'Changed'
+  
+          console.log(document.body)
+          console.log(typeof document.body)
+  
+          console.log(document.body.innerHTML)
+          document.body.innerHTML = '<button>Good Job!</button>'
+   */
+        console.log(document.querySelector("button"));
+        console.log(document.querySelector('button').innerHTML);
+        document.querySelector('button').innerHTML = 'Change';
 
-        console.log(document.body)
-        console.log(typeof document.body)
 
-        console.log(document.body.innerHTML)
-        document.body.innerHTML = '<button>Good Job!</button>'
+        // console.log(document.querySelector('.js-button'))
 
+        const buttonElement = document.querySelector('.js-button')
+        console.log(buttonElement)
     </script>
 </body>
 
