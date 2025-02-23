@@ -14,7 +14,15 @@
 " class="js-subscribe-button"> Subscribe</button>
 
     <p>Amazon Shipping Calculator</p>
-    <input class="js-cost-input" placeholder="Cost of order">
+    <input class="js-cost-input" placeholder="Cost of order" onkeydown="
+        // console.log('type')
+        // console.log(event) // even is an object. Every even listener gets an event object
+        // console.log(event.key)
+        if(event.key=== 'Enter'){
+            calculateTotal()
+        }
+
+    ">
 
     <button onclick="
         calculateTotal()
