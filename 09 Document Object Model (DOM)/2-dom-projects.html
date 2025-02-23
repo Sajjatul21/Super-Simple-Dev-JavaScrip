@@ -15,12 +15,7 @@
 
     <p>Amazon Shipping Calculator</p>
     <input class="js-cost-input" placeholder="Cost of order" onkeydown="
-        // console.log('type')
-        // console.log(event) // even is an object. Every even listener gets an event object
-        // console.log(event.key)
-        if(event.key=== 'Enter'){
-            calculateTotal()
-        }
+        handleCostKeyDown(event)
 
     ">
 
@@ -29,6 +24,11 @@
     ">Calculate</button>
     <p class="js-total-cost"></p>
     <script>
+        function handleCostKeyDown() {
+            if (event.key === "Enter") {
+                calculateTotal();
+            }
+        }
         function calculateTotal() {
             const inputElement = document.querySelector('.js-cost-input');
             let cost = Number(inputElement.value);
