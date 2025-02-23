@@ -30,35 +30,43 @@
          console.log(product);
  
          console.log(product.xfhalfa) */
-
-        const product2 = {
-            name: "shirt",
-            'delivery-time': '1 day',
-            rating: { // nested object
-                starts: 4.5,
-                count: 87
-            },
-            fun: function function1() { // method
-                console.log('function inside object');
-            }
-        };
-        console.log(product2.name);
-        console.log(product2['name']);
-        console.log(product2['delivery-time']);
-        console.log(product2['delivery-time']);
-
-        console.log(product2.rating.starts);
-        console.log(product2.fun());
-
-        console.log(typeof console);
-        console.log(typeof console.log);  // object + function= method
-        // build-in object
-        Math.random();
-        console.log(JSON.stringify(product2));
-        console.log(typeof JSON.stringify(product2));
-
-        const jsonString = JSON.stringify(product2);
-        console.log(JSON.parse(jsonString))
+        /* 
+                const product2 = {
+                    name: "shirt",
+                    'delivery-time': '1 day',
+                    rating: { // nested object
+                        starts: 4.5,
+                        count: 87
+                    },
+                    fun: function function1() { // method
+                        console.log('function inside object');
+                    }
+                };
+                console.log(product2.name);
+                console.log(product2['name']);
+                console.log(product2['delivery-time']);
+                console.log(product2['delivery-time']);
+        
+                console.log(product2.rating.starts);
+                console.log(product2.fun());
+        
+                console.log(typeof console);
+                console.log(typeof console.log);  // object + function= method
+                // build-in object
+                Math.random();
+                console.log(JSON.stringify(product2));
+                console.log(typeof JSON.stringify(product2));
+        
+                const jsonString = JSON.stringify(product2);
+                console.log(JSON.parse(jsonString))
+         */
+        // null = intentionally want something to be empty
+        console.log('hello'.length);
+        console.log('hello'.toUpperCase())
+        
+        //auto boxing also work on number and boolean
+        3.0.toString()
+        true.toString()
     </script>
 </body>
 
