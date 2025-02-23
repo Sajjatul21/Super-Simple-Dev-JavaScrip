@@ -11,25 +11,35 @@
     <h1>Objects</h1>
 
     <script>
-        const product = {
-            name: "socks",
-            price: 1090
+        /*  const product = {
+             name: "socks",
+             price: 1090
+         };
+         console.log(product);
+         console.log(typeof product);
+         console.log(product.name);
+         console.log(product.price);
+ 
+         product.name = 'cotton socks';
+         console.log(product);
+ 
+         product.newProperty = true;
+         console.log(product);
+ 
+         delete product.newProperty;
+         console.log(product);
+ 
+         console.log(product.xfhalfa) */
+
+        const product2 = {
+            name: "shirt",
+            // ['delivery-time']: '1 day'
+            ['delivery-time']: '1 day'
         };
-        console.log(product);
-        console.log(typeof product);
-        console.log(product.name);
-        console.log(product.price);
-
-        product.name = 'cotton socks';
-        console.log(product);
-
-        product.newProperty = true;
-        console.log(product);
-
-        delete product.newProperty;
-        console.log(product);
-
-        console.log(product.xfhalfa)
+        console.log(product2.name);
+        console.log(product2['name']);
+        console.log(product2['delivery-time'])
+        console.log(product2['delivery-time'])
     </script>
 </body>
 
