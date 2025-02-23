@@ -74,14 +74,36 @@
         const object2 = object1; // object2 copy object1 references
         object1.message = 'Good Job!';
         console.log(object1);
-        console.log(object2)
+        console.log(object2);
 
         // we don't compare object directly 
         const object3 = {
-            message : 'Good job!'
+            message: 'Good job!'
+        };
+        console.log(object1 === object3);
+        console.log(object1 === object2); // true because same references
+
+        const object4 = {
+            message: 'Good job!',
+            price: 635
+        };
+        // const message = object4.message
+        // const {message} = object4 // destructuring
+        const { message, price } = object4;
+        console.log(message, price);
+
+        
+        const object5 = {
+            // message: message
+            message,   // called shorthand property
+
+            /*     method: function function1(){
+                    console.log('method')
+                } */
+            method() {  // called shorthand method
+                console.log('method');
+            }
         }
-        console.log(object1 === object3)
-        console.log(object1 === object2) // true because same references
     </script>
 </body>
 
