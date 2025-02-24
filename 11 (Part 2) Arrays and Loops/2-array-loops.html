@@ -52,12 +52,15 @@
             const numsDouble = [];
             for (let i = 0; i < nums.length; i++) {
                 const num = nums[i];
+                if (num === 0) {
+                    return numsDouble;
+                }
                 numsDouble.push(num * 2);
             }
-            console.log(numsDouble);
+            return numsDouble;
         }
-        doubleArray([1, 2, 3, 4]);
-        doubleArray([1, 1, 1, 1])
+        console.log(doubleArray([1, 2, 3, 4]));
+        console.log(doubleArray([1, 1, 1, 1, 0, 10]))
     </script>
 </body>
 
