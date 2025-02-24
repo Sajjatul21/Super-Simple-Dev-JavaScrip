@@ -10,18 +10,33 @@
 <body>
     <h3>Array and Loops </h3>
     <script>
-        // array store references like object
-        const array1 = [1, 2, 3]; // references
-        const array2 = array1; // copy references array2 in array1
-        array2.push(4);
-        console.log(array1);
-        console.log(array2);
+        /*  // array store references like object
+         const array1 = [1, 2, 3]; // references
+         const array2 = array1; // copy references array2 in array1
+         array2.push(4);
+         console.log(array1);
+         console.log(array2);
+ 
+         // to remove remove references use slice()
+         const array3 = array1.slice();
+         array3.push(4);
+         console.log(array1);
+         console.log(array3) */
 
-        // to remove remove references use slice()
-        const array3 = array1.slice();
-        array3.push(4);
-        console.log(array1);
-        console.log(array3)
+        const [first, second] = [1, 2, 3];
+        console.log(first, second);
+
+
+        // more details loops
+        for (let i = 0; i <= 10; i++) {
+            if (i % 3 === 0) {
+                continue;   // continue skip one iteration
+            }
+            console.log(i);
+            if (i === 8) {
+                break;  // exit a loop early 
+            }
+        }
     </script>
 </body>
 
