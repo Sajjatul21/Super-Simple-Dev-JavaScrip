@@ -11,6 +11,18 @@
     <h3>Advance Function</h3>
 
     <script>
+        [
+            'make dinner',
+            'wish dishes',
+            'watch youtube'
+        ].forEach((value, index) => {
+            if (value === 'wash dishes') {
+                return;
+            }
+            console.log(index, value);
+        });
+
+
         const regularFunction = function (param, param2) {
             console.log("Hello");
             return 5;
