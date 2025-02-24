@@ -15,13 +15,19 @@
         console.log(myArray[1]);
 
         // set element 
-        myArray[0] = 99
-        [1, 'hello', true, { name: 'socks' }, [1, 2]];
+        myArray[0] = 99;
+        const arr = [1, 'hello', true, { name: 'socks' }, [1, 2]];
         console.log(typeof [1, 2]);
         console.log(Array.isArray([1, 2]));
 
         // array is special object it has property
-        console.log(myArray.length)
+        console.log(myArray.length);
+
+        myArray.push(100);
+        console.log(myArray);
+
+        myArray.splice(0, 1);
+        console.log(myArray)
     </script>
 </body>
 
