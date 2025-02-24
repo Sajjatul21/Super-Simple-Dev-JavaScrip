@@ -19,7 +19,33 @@
         };
         console.log(funciton1);
         console.log(typeof funciton1);
-        funciton1()
+        funciton1(); // // function1 contain function. we can call function1 variable
+
+        const object1 = {
+            num: 2,
+            fun: function () {  // function are value. we can use in obj
+                console.log("hello-3");
+            }
+        };
+        object1.fun();  // fun contain function 
+
+
+        function str(parameter) { // parameter just like a variable
+            console.log(parameter);
+
+        }
+        str('string');
+
+        // function are values. we can pass a value into a function 
+        // passing a function in another function. its called callback function 
+        function run(params) {
+            params(); // param contain function. we can cal it
+
+        }
+        run(function () {
+            console.log('hello-4');
+        })
+
     </script>
 </body>
 
