@@ -22,21 +22,42 @@
          array3.push(4);
          console.log(array1);
          console.log(array3) */
-
-        const [first, second] = [1, 2, 3];
-        console.log(first, second);
-
-
-        // more details loops
-        for (let i = 0; i <= 10; i++) {
-            if (i % 3 === 0) {
-                continue;   // continue skip one iteration
+        /* 
+                const [first, second] = [1, 2, 3];
+                console.log(first, second);
+        
+        
+                // more details loops
+                for (let i = 0; i <= 10; i++) {
+                    if (i % 3 === 0) {
+                        continue;   // continue skip one iteration
+                    }
+                    console.log(i);
+                    if (i === 8) {
+                        break;  // exit a loop early 
+                    }
+                } */
+        /* 
+                let i = 3;
+                while (i <= 13) {
+                    if (i % 3 === 0) {
+                        i++;
+                        continue;
+                        console.log(i);
+                    }
+                    i++;
+                    console.log(i);
+                }   */
+        function doubleArray(nums) {
+            const numsDouble = [];
+            for (let i = 0; i < nums.length; i++) {
+                const num = nums[i];
+                numsDouble.push(num * 2);
             }
-            console.log(i);
-            if (i === 8) {
-                break;  // exit a loop early 
-            }
+            console.log(numsDouble);
         }
+        doubleArray([1, 2, 3, 4]);
+        doubleArray([1, 1, 1, 1])
     </script>
 </body>
 
