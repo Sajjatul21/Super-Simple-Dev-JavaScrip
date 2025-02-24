@@ -13,9 +13,13 @@
     <script>
         const buttonElement = document.querySelector('.js-button');
         // event listener have two parameter
-        buttonElement.addEventListener('click', () => {
+        const eventListener = () => {
             console.log('click');
-        });
+        };
+        buttonElement.addEventListener('click', eventListener);
+        // remove eventListener
+        buttonElement.removeEventListener('click', eventListener);
+
         // addEventListener opportunity: add multiple even listener
 
         buttonElement.addEventListener('click', () => {
