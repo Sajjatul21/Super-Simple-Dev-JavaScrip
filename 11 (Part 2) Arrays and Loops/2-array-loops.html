@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array and Loops</title>
+</head>
+
+<body>
+    <h3>Array and Loops </h3>
+    <script>
+        // array store references like object
+        const array1 = [1, 2, 3]; // references
+        const array2 = array1; // copy references array2 in array1
+        array2.push(4);
+        console.log(array1);
+        console.log(array2);
+
+        // to remove remove references use slice()
+        const array3 = array1.slice();
+        array3.push(4);
+        console.log(array1);
+        console.log(array3)
+    </script>
+</body>
+
+</html>
