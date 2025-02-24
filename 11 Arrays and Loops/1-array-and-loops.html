@@ -28,23 +28,53 @@
  
          myArray.splice(0, 1);
          console.log(myArray) */
+        /* 
+                // Non-Standard Loop => while 
+                let i = 1;
+                while (i < 5) {
+                    console.log(i);
+                    i++;
+                }
+                // standard loop => for  
+                for (let i = 1; i <= 5; i++) {
+                    console.log(i);
+                }
+                let radomNumber = 0;
+                while (radomNumber < 0.5) {
+                    radomNumber = Math.random();
+                }
+                console.log(radomNumber) */
 
-        // Non-Standard Loop => while 
-        let i = 1;
-        while (i < 5) {
-            console.log(i);
-            i++;
-        }
-        // standard loop => for  
-        for (let i = 1; i <= 5; i++) {
-            console.log(i);
-        }
-        let radomNumber = 0;
-        while (radomNumber < 0.5) {
-            radomNumber = Math.random();
-        }
-        console.log(radomNumber)
+        /*  const todoList = [
+             'make dinner',
+             'wash dishes',
+             'watch youtube'
+         ];
+         for (let index = 0; index < todoList.length; index++) {
+             const value = todoList[index];
+             console.log(value);
+         } */
 
+        /* 
+        Accumulator pattern 
+            1. create a variable to store the result 
+            2. loop thought the array and update result
+         */
+        const nums = [1, 2, 3];
+        let total = 0; // accumulator variable
+        for (let i = 0; i < nums.length; i++) {
+            const num = nums[i];
+            total += num;
+        }
+        console.log(total);
+
+
+        const numsDouble = [];
+        for (let i = 0; i < nums.length; i++) {
+            const num = nums[i];
+            numsDouble.push(num * 2);
+        }
+        console.log(numsDouble)
     </script>
 </body>
 
