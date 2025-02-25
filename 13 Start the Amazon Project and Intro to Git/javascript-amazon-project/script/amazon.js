@@ -59,6 +59,12 @@ document.querySelectorAll('.js-add-to-cart')
     // console.log(butto n);
     button.addEventListener('click', () => {
       const productName = button.dataset.productName;
+      let matchingItem;
+      cart.forEach(item => {
+        if (productName == item.productName) {
+          matchingItem = item;
+        }
+      });
       cart.push({
         productName: productName,
         quantity: 1
