@@ -1,6 +1,5 @@
 import { cart } from '../script/card.js';
-// import { cart as myCart } from '../script/card.js';  rename cart
-
+import { products } from '../data/products.js';
 
 let productsHtml = ''; // accumulator variable
 products.forEach(product => {
