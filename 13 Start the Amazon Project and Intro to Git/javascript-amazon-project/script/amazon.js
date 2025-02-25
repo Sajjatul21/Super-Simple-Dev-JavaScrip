@@ -1,3 +1,7 @@
+import { cart } from '../script/card.js';
+// import { cart as myCart } from '../script/card.js';  rename cart
+
+
 let productsHtml = ''; // accumulator variable
 products.forEach(product => {
   // accumulator pattern
@@ -78,8 +82,6 @@ document.querySelectorAll('.js-add-to-cart')
       cart.forEach(item => {
         cartQuantity += item.quantity;
       });
-      /* console.log(cartQuantity);
-      console.log(cart); */
       document.querySelector('.js-cart-quantity').innerHTML = cartQuantity;
 
     });
