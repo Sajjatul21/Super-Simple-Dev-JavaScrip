@@ -1,4 +1,4 @@
-import { cart } from '../script/card.js';
+import { cart, addToCart } from '../script/card.js';
 import { products } from '../data/products.js';
 
 let productsHtml = ''; // accumulator variable
@@ -56,7 +56,7 @@ products.forEach(product => {
 });
 // console.log(productsHtml);   
 document.querySelector('.js-products-grid').innerHTML = productsHtml;
-function updateCartQuantity (){
+function updateCartQuantity() {
   let cartQuantity = 0;
   cart.forEach(item => {
     cartQuantity += item.quantity;
@@ -64,24 +64,6 @@ function updateCartQuantity (){
   document.querySelector('.js-cart-quantity').innerHTML = cartQuantity;
 
 }
-function addToCart(productId) {
-  let matchingItem;
-  cart.forEach(item => {
-    if (productId === item.productId) {
-      matchingItem = item;
-    }
-  });
-  if (matchingItem) {
-    matchingItem.quantity += 1;
-  }
-  else {
-    cart.push({
-      productId: productId,
-      quantity: 1
-    });
-  }
-}
-
 
 
 document.querySelectorAll('.js-add-to-cart')
@@ -89,7 +71,7 @@ document.querySelectorAll('.js-add-to-cart')
     // console.log(butto n);
     button.addEventListener('click', () => {
       const productId = button.dataset.productId;
-      addToCart()
-      updateCartQuantity()
+      addToCart();
+      updateCartQuantity();
     });
   });
