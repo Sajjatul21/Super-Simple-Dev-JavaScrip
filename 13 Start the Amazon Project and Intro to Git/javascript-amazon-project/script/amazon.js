@@ -56,9 +56,13 @@ document.querySelector('.js-products-grid').innerHTML = productsHtml;
 
 document.querySelectorAll('.js-add-to-cart')
   .forEach(button => {
-    // console.log(button);
+    // console.log(butto n);
     button.addEventListener('click', () => {
-      console.log(button.dataset);
-      console.log(button.dataset.productName);
+      const productName = button.dataset.productName;
+      cart.push({
+        productName: productName,
+        quantity: 1
+      });
+      console.log(cart);
     });
   });
