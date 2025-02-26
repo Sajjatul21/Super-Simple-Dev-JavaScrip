@@ -2,19 +2,20 @@ import { cart, removeFromCart } from "./card.js";
 import { products } from "../data/products.js";
 import { formateCurrency } from "./utils/money.js";
 
+hello();
+
 let cartSummaryHtml = '';
-
 cart.forEach(cartItem => {
-    const productId = cartItem.productId;
-    let matchingProduct;
-    products.forEach(product => {
-        if (product.id === productId)
-            matchingProduct = product;
+  const productId = cartItem.productId;
+  let matchingProduct;
+  products.forEach(product => {
+    if (product.id === productId)
+      matchingProduct = product;
 
-    });
+  });
 
 
-    cartSummaryHtml += `
+  cartSummaryHtml += `
     <div class="cart-item-container js-cart-item-container-${productId}">
           <div class="delivery-date">
             Delivery date: Tuesday, June 21
@@ -89,12 +90,12 @@ cart.forEach(cartItem => {
 document.querySelector('.js-order-summary').innerHTML = cartSummaryHtml;
 
 document.querySelectorAll('.js-delete-link').forEach(link => {
-    link.addEventListener('click', () => {
-        const productId = link.dataset.productId;
-        removeFromCart(productId);
-        const container = document.querySelector(`.js-cart-item-container-${productId}`);
-        container.remove();
+  link.addEventListener('click', () => {
+    const productId = link.dataset.productId;
+    removeFromCart(productId);
+    const container = document.querySelector(`.js-cart-item-container-${productId}`);
+    container.remove();
 
 
-    });
+  });
 });
