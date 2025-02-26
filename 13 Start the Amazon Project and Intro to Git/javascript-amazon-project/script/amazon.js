@@ -1,7 +1,7 @@
 import { cart, addToCart } from '../script/card.js';
 import { products } from '../data/products.js';
 import { formateCurrency } from './utils/money.js';
-console.log(products);
+
 let productsHtml = ''; // accumulator variable
 products.forEach(product => {
   // accumulator pattern
