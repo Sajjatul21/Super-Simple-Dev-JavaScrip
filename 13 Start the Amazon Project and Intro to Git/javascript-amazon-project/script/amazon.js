@@ -1,6 +1,7 @@
 import { cart, addToCart } from '../script/card.js';
 import { products } from '../data/products.js';
-console.log(products)
+import { formateCurrency } from './utils/money.js';
+console.log(products);
 let productsHtml = ''; // accumulator variable
 products.forEach(product => {
   // accumulator pattern
@@ -22,7 +23,7 @@ products.forEach(product => {
         </div>
 
         <div class="product-price">
-          $${(product.priceCents / 100).toFixed(2)}
+          $${formateCurrency(product.priceCents)}
         </div>
         
         <div class="product-quantity-container">

@@ -1,10 +1,6 @@
 import { cart } from "./card.js";
 import { products } from "../data/products.js";
-/* console.log(cart);
-cart.forEach(cartItem => {
-    console.log(cartItem);
-}); */
-
+import { formateCurrency } from "./utils/money.js";
 let cartSummaryHtml = '';
 
 cart.forEach(cartItem => {
@@ -15,9 +11,8 @@ cart.forEach(cartItem => {
             matchingProduct = product;
 
     });
-    console.log(matchingProduct);
 
-    // console.log(matchingProducts)
+
     cartSummaryHtml += `
     <div class="cart-item-container">
           <div class="delivery-date">
@@ -32,7 +27,7 @@ cart.forEach(cartItem => {
                 ${matchingProduct.name}
               </div>
               <div class="product-price">
-                $${(matchingProduct.priceCents/100)}
+                $${formateCurrency(matchingProduct.priceCents)}
               </div>
               <div class="product-quantity">
                 <span>
@@ -88,6 +83,5 @@ cart.forEach(cartItem => {
           </div>
         </div>
     `;
-});
-console.log(cartSummaryHtml)
+});   
 document.querySelector('.js-order-summary').innerHTML = cartSummaryHtml;
