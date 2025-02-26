@@ -1,6 +1,6 @@
 import { cart, addToCart } from '../script/card.js';
 import { products } from '../data/products.js';
-
+console.log(products)
 let productsHtml = ''; // accumulator variable
 products.forEach(product => {
   // accumulator pattern
@@ -71,7 +71,7 @@ document.querySelectorAll('.js-add-to-cart')
     // console.log(butto n);
     button.addEventListener('click', () => {
       const productId = button.dataset.productId;
-      addToCart();
+      addToCart(productId);
       updateCartQuantity();
     });
   });
