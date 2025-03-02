@@ -1,12 +1,13 @@
 class Cart {
     cartItem;
-    localStorageKey;
+    #localStorageKey; // privet property (private = it can only be accessed inside the class)
+
     constructor(localStorageKey) { // constructor lets us put this setup code inside the class
-        this.localStorageKey = localStorageKey;
+        this.#localStorageKey = localStorageKey;
         this.loadFromStorage();
     }
     loadFromStorage() {
-        this.cartItem = JSON.parse(localStorage.getItem(this.localStorageKey));
+        this.cartItem = JSON.parse(localStorage.getItem(this.#localStorageKey));
         if (!this.cartItem) {
             this.cartItem = [{
                 productId: "e43638ce-6aa0-4b85-b27f-e1d07eb678c6",
@@ -23,7 +24,7 @@ class Cart {
     }
 
     saveToStorage() {
-        localStorage.setItem(this.localStorageKey, JSON.stringify(this.cartItem));
+        localStorage.setItem(this.#localStorageKey, JSON.stringify(this.cartItem));
     }
 
 
@@ -82,8 +83,4 @@ const businessCart = new Cart('cart-business');
 
 console.log(cart);
 console.log(businessCart);
-
-console.log(cart instanceof Cart);
-console.log(businessCart instanceof Cart);
-
 
