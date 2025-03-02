@@ -4,9 +4,9 @@ class Cart {
 
     constructor(localStorageKey) { // constructor lets us put this setup code inside the class
         this.#localStorageKey = localStorageKey;
-        this.loadFromStorage();
+        this.#loadFromStorage();
     }
-    loadFromStorage() {
+    #loadFromStorage() { 
         this.cartItem = JSON.parse(localStorage.getItem(this.#localStorageKey));
         if (!this.cartItem) {
             this.cartItem = [{
