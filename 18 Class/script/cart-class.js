@@ -1,6 +1,10 @@
 class Cart {
-    cartItem = undefined;
-    localStorageKey = undefined;
+    cartItem;
+    localStorageKey;
+    constructor(localStorageKey) { // constructor lets us put this setup code inside the class
+        this.localStorageKey = localStorageKey;
+        this.loadFromStorage();
+    }
     loadFromStorage() {
         this.cartItem = JSON.parse(localStorage.getItem(this.localStorageKey));
         if (!this.cartItem) {
@@ -75,16 +79,11 @@ class Cart {
 const cart = new Cart('cart-oop');
 const businessCart = new Cart('cart-business');
 
-cart.localStorageKey = 'cart-oop';
-businessCart.localStorageKey = 'cart-business';
-cart.loadFromStorage();
-businessCart.loadFromStorage();
 
 console.log(cart);
 console.log(businessCart);
 
 console.log(cart instanceof Cart);
-console.log(businessCart instanceof Cart)
-
+console.log(businessCart instanceof Cart);
 
 
