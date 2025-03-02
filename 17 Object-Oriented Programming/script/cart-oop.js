@@ -2,9 +2,9 @@ const cart = {
     cartItem: undefined,
 
     loadFromStorage() {
-        cart.cartItem = JSON.parse(localStorage.getItem('cart'));
+        this.cartItem = JSON.parse(localStorage.getItem('cart'));
         if (!cart.cartItem) {
-            cart.cartItem = [{
+            this.cartItem = [{
                 productId: "e43638ce-6aa0-4b85-b27f-e1d07eb678c6",
                 quantity: 2,
                 deliveryOptionId: '1' // imagine select first delivery option 
