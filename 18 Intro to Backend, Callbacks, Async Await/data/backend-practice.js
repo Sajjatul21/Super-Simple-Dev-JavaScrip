@@ -1,4 +1,4 @@
-const xhr = new XMLHttpRequest(); // create a new  HTTP message to sand to the backend;
+const xhr = new XMLHttpRequest(); 
 
 xhr.addEventListener('load', () => {
     console.log(xhr.response);
