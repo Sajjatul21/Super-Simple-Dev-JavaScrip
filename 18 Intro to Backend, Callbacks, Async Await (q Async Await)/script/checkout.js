@@ -6,24 +6,16 @@ import { loadCart } from './card.js';
 
 async function loadPage() {
     console.log('load page');
-    return 'value-2';
-}
-loadPage().then((value) => {
-    console.log("next step");
-    console.log(value);
-});
+    await loadProductsFetch();
 
-Promise.all([
-    loadProductsFetch(),
-    new Promise(resolve => {
+    await new Promise(resolve => {
         loadCart(() => {
             resolve();
         });
-    })
-
-]).then(() => {
+    });
     renderOrderSummary();
     renderPaymentSummary();
-});
 
-//fetch () = Is better way to make HTTPS request
+    return 'value-2';
+}
+loadPage();
