@@ -64,16 +64,20 @@ export function renderPaymentSummary() {
       DELETE: delete something 
       */
     // 
-    const response = await fetch('https://supersimplebackend.dev/orders', {
-      method: "POST",
-      headers: {  // headers gives the backend more information about our request.
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({
-        cart: cart
-      })
-    });
-    const order = await response.json();
-    addOrder(order);
+    try {
+      const response = await fetch('https://supersimplebackend.dev/orders', {
+        method: "POST",
+        headers: {  // headers gives the backend more information about our request.
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          cart: cart
+        })
+      });
+      const order = await response.json();
+      addOrder(order);
+    } catch (error) {
+      console.log('Unexpected error. Try again later');
+    }
   });
 }
