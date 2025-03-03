@@ -78,7 +78,14 @@ function loadProducts() {
   const xhr = new XMLHttpRequest();
 
   xhr.addEventListener('load', () => { // his is a function that we want to run after the response has loaded
-    console.log(xhr.response);
+    // console.log(products = JSON.parse(xhr.response));
+    products = JSON.parse(xhr.response).map(productDetails => {
+      if (productDetails.type === 'clothing') {
+        return new Clothing(productDetails);
+      }
+      return new Product(productDetails);
+    });
+    console.log(products);
   });
   xhr.open("GET", 'https://supersimplebackend.dev/products');
   xhr.send();  // .send() that means its send the request but it will not wait for a response to come back in order to wait for a response set up  a eventListener;
