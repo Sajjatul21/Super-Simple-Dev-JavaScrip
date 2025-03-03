@@ -71,9 +71,13 @@ const tShirt = new Clothing(
 console.log(tShirt);
 console.log(tShirt.getPrice());
 
-const date = new Date();
-console.log(date);
-console.log(date.toLocaleDateString());
+console.log(this); // undefine because we ues module 
+
+const object2 = {
+  a: 2,
+  b: this.a   // এখানে this.a কাজ করবে না কারণ this শুধুমাত্র একটি ফাংশনের ভেতরে কাজ করে, সরাসরি অবজেক্ট লিটারেলে নয়। 
+};
+
 
 export const products = [
   {
