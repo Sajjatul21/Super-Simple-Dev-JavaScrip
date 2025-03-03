@@ -71,13 +71,25 @@ const tShirt = new Clothing(
 console.log(tShirt);
 console.log(tShirt.getPrice());
 
-console.log(this); // undefine because we ues module 
+/* console.log(this); // undefine because we ues module 
 
 const object2 = {
   a: 2,
   b: this.a   // এখানে this.a কাজ করবে না কারণ this শুধুমাত্র একটি ফাংশনের ভেতরে কাজ করে, সরাসরি অবজেক্ট লিটারেলে নয়। 
-};
+}; */
 
+function logThis() {
+  console.log(this);
+}
+logThis();
+logThis.call('Hello');
+
+const object3  = {
+  method: () => { // arrow functions do not change the value of 'this';
+    console.log(this);// "this" will have the same value as outside the arrow function;
+  } // this keeps the value that it had outside the arrow function
+};
+object3.method()
 
 export const products = [
   {
