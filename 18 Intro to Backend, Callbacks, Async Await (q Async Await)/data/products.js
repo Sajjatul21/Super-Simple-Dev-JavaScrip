@@ -81,12 +81,12 @@ export function loadProductsFetch() {
         return new Product(productDetails);
       });
       console.log('load data');
-    }).catch(error => {
+    })/*. catch(error => {
       console.log('Unexpected Error. Please try again later');
-    });
+    }) */;
   return promises;
 }
-loadProductsFetch();
+
 export let products = [];
 
 export function loadProducts(func) {
