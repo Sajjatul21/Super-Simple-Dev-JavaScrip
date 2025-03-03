@@ -6,9 +6,11 @@ import { loadCart } from './card.js';
 
 async function loadPage() {
     console.log('load page');
+    return 'value-2';
 }
-loadPage().then(()=>{
-    console.log("next step")
+loadPage().then((value) => {
+    console.log("next step");
+    console.log(value);
 });
 
 Promise.all([
