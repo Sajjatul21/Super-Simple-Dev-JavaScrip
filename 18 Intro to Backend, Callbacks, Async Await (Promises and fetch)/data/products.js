@@ -68,7 +68,7 @@ const tShirt = new Clothing(
   }
 );
 
-function loadProductsFetch() {
+export function loadProductsFetch() {
   const promises = fetch('https://supersimplebackend.dev/products')
     .then((response) => {
       return response.json();
@@ -84,9 +84,7 @@ function loadProductsFetch() {
     });
   return promises;
 }
-loadProductsFetch().then(() => {
-  console.log('next Step');
-});
+
 export let products = [];
 
 export function loadProducts(func) {
