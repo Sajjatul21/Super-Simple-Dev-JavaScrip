@@ -11,3 +11,8 @@ const xhr = new XMLHttpRequest(); // create a new  HTTP message to sand to the b
 */
 xhr.open('GET', 'https://supersimplebackend.dev');
 xhr.send(); // send a request on supersimplebackend  backend;
+
+// get the response property name ( response)
+// it take time for the request to travel across the internet 
+// xhr.response = undefine at first 
+xhr.response
