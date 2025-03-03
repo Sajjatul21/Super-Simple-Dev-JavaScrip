@@ -68,9 +68,9 @@ const tShirt = new Clothing(
   }
 );
 
-console.log(tShirt);
+/* console.log(tShirt);
 console.log(tShirt.getPrice());
-
+ */
 
 export const products = [
   {
