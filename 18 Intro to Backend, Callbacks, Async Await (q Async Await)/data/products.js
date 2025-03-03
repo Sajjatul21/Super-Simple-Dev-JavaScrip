@@ -100,12 +100,16 @@ export function loadProducts(func) {
     });
     console.log('load data');
     func();
+
+
   });
-  xhr.open("GET", 'https://supersimplebackend.dev/products');
-  xhr.send();  // .send() that means its send the request but it will not wait for a response to come back in order to wait for a response set up  a eventListener;
+  xhr.addEventListener('error', () => {
+    console.log('Unexpected Error. Please try again later');
+  });
+  xhr.open("GET", 'https://error.supersimplebackend.dev/products');
+  xhr.send();
 }
-
-
+loadProducts()
 /* export const products = [
   {
     id: "e43638ce-6aa0-4b85-b27f-e1d07eb678c6",
