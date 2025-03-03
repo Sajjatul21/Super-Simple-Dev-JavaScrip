@@ -6,13 +6,16 @@ import { loadCart } from './card.js';
 
 async function loadPage() {
     try {
-        throw "error-1";
+        // throw "error-1";
+        // reject() is a function. it lets us create an error in the future.
 
         await loadProductsFetch();
 
-        await new Promise(resolve => {
+        await new Promise((resolve, reject) => {
+            // throw 'error -2'
             loadCart(() => {
-                resolve();
+                reject('Error-3');
+                // resolve();
             });
         });
     } catch (error) {
