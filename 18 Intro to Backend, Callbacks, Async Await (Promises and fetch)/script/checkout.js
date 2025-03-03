@@ -20,27 +20,5 @@ Promise.all([
     renderOrderSummary();
     renderPaymentSummary();
 });
-/* 
-new Promise((resolve) => {
-    loadProducts(() => {
-        resolve('value-1');
-    });
-}).then((value) => {
-    console.log(value);
-    new Promise(resolve => {
-        loadCart(() => {
-            resolve();
-        });
-    });
-}).then(() => {
-    renderOrderSummary();
-    renderPaymentSummary();
-})
- */
-/* 
-loadProducts(() => {
-    loadCart(() => {
-        renderOrderSummary();
-        renderPaymentSummary();
-    });
-});  */
+
+//fetch () = Is better way to make HTTPS request

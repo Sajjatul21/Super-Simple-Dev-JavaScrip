@@ -68,10 +68,25 @@ const tShirt = new Clothing(
   }
 );
 
-/* console.log(tShirt);
-console.log(tShirt.getPrice());
- */
-
+function loadProductsFetch() {
+  const promises = fetch('https://supersimplebackend.dev/products')
+    .then((response) => {
+      return response.json();
+    })
+    .then(productsData => {
+      products = productsData.map(productDetails => {
+        if (productDetails.type === 'clothing') {
+          return new Clothing(productDetails);
+        }
+        return new Product(productDetails);
+      });
+      console.log('load data');
+    });
+  return promises;
+}
+loadProductsFetch().then(() => {
+  console.log('next Step');
+});
 export let products = [];
 
 export function loadProducts(func) {
