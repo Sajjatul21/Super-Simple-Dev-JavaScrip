@@ -3,6 +3,14 @@ import { renderPaymentSummary } from './checkout/paymentSummary.js';
 import { loadProducts, loadProductsFetch } from '../data/products.js';
 import { loadCart } from './card.js';
 
+
+async function loadPage() {
+    console.log('load page');
+}
+loadPage().then(()=>{
+    console.log("next step")
+});
+
 Promise.all([
     loadProductsFetch(),
     new Promise(resolve => {
@@ -11,8 +19,7 @@ Promise.all([
         });
     })
 
-]).then((value) => {
-    console.log(value);
+]).then(() => {
     renderOrderSummary();
     renderPaymentSummary();
 });
