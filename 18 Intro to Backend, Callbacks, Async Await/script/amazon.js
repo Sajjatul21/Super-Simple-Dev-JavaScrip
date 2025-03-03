@@ -1,11 +1,14 @@
 import { cart, addToCart } from '../script/card.js';
 import { products, loadProducts } from '../data/products.js';
 import { formateCurrency } from './utils/money.js';
-loadProducts()
-let productsHtml = ''; // accumulator variable
-products.forEach(product => {
-  // accumulator pattern
-  productsHtml += `
+loadProducts(renderProductsGrid);
+
+function renderProductsGrid() {
+
+  let productsHtml = ''; // accumulator variable
+  products.forEach(product => {
+    // accumulator pattern
+    productsHtml += `
     <div class="product-container">
     <div class="product-image-container">
           <img class="product-image" src="${product.image}">
@@ -56,25 +59,26 @@ products.forEach(product => {
         </button>
       </div>
     `;
-});
-// console.log(productsHtml);   
-document.querySelector('.js-products-grid').innerHTML = productsHtml;
-function updateCartQuantity() {
-  let cartQuantity = 0;
-  cart.forEach(item => {
-    cartQuantity += item.quantity;
   });
-  document.querySelector('.js-cart-quantity').innerHTML = cartQuantity;
-
-}
-
-
-document.querySelectorAll('.js-add-to-cart')
-  .forEach(button => {
-    // console.log(butto n);
-    button.addEventListener('click', () => {
-      const productId = button.dataset.productId;
-      addToCart(productId);
-      updateCartQuantity();
+  // console.log(productsHtml);   
+  document.querySelector('.js-products-grid').innerHTML = productsHtml;
+  function updateCartQuantity() {
+    let cartQuantity = 0;
+    cart.forEach(item => {
+      cartQuantity += item.quantity;
     });
-  });
+    document.querySelector('.js-cart-quantity').innerHTML = cartQuantity;
+
+  }
+
+
+  document.querySelectorAll('.js-add-to-cart')
+    .forEach(button => {
+      // console.log(butto n);
+      button.addEventListener('click', () => {
+        const productId = button.dataset.productId;
+        addToCart(productId);
+        updateCartQuantity();
+      });
+    });
+};
