@@ -69,7 +69,7 @@ const tShirt = new Clothing(
 );
 
 export function loadProductsFetch() {
-  const promises = fetch('https://error.supersimplebackend.dev/products')
+  const promises = fetch('https://supersimplebackend.dev/products')
     .then((response) => {
       return response.json();
     })
@@ -81,9 +81,9 @@ export function loadProductsFetch() {
         return new Product(productDetails);
       });
       console.log('load data');
-    })/*. catch(error => {
+    }).catch(error => {
       console.log('Unexpected Error. Please try again later');
-    }) */;
+    });
   return promises;
 }
 

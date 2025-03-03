@@ -6,6 +6,8 @@ import { loadCart } from './card.js';
 
 async function loadPage() {
     try {
+        throw "error-1";
+
         await loadProductsFetch();
 
         await new Promise(resolve => {
