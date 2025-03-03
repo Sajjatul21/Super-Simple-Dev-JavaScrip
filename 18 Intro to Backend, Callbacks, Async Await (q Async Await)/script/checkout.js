@@ -14,8 +14,8 @@ async function loadPage() {
         await new Promise((resolve, reject) => {
             // throw 'error -2'
             loadCart(() => {
-                reject('Error-3');
-                // resolve();
+                // reject('Error-3');
+                resolve();
             });
         });
     } catch (error) {
