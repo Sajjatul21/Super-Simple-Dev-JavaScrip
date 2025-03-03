@@ -75,10 +75,15 @@ console.log(tShirt.getPrice());
 export let products = [];
 
 function loadProducts() {
-  const xhr = new XMLHttpRequest;
-  open("GET", 'https://supersimplebackend.dev/products');
-  xhr.send();
+  const xhr = new XMLHttpRequest();
+
+  xhr.addEventListener('load', () => { // his is a function that we want to run after the response has loaded
+    console.log(xhr.response);
+  });
+  xhr.open("GET", 'https://supersimplebackend.dev/products');
+  xhr.send();  // .send() that means its send the request but it will not wait for a response to come back in order to wait for a response set up  a eventListener;
 }
+loadProducts()
 
 /* export const products = [
   {
